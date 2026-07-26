@@ -240,7 +240,7 @@ def generate_story_via_deepseek(subject: str) -> str:
     user_prompt = f"请为今天的{subject}专栏创作一篇知识故事。选题：{topic}。"
 
     response = client.chat.completions.create(
-        model="deepseek-chat",
+        model="deepseek-v4-pro",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
